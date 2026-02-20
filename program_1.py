@@ -8,8 +8,38 @@
 def kilometer_conversion(kilometers):    
     miles = 0.0
     ######################
-    # WRITE YOUR CODE HERE
-    ######################    
+     """
+    Converts kilometers to miles.
+    
+    Parameters:
+        kilometers (float): distance in kilometers
+        
+    Returns:
+        float: distance in miles
+    """
+    miles = kilometers * 0.6214
+    return miles
+
+
+def main():
+    print("=== Kilometer to Mile Converter ===")
+    
+    try:
+        kilometers = float(input("Enter distance in kilometers: "))
+        
+        if kilometers < 0:
+            print("Distance cannot be negative.")
+        else:
+            miles = kilometers_to_miles(kilometers)
+            print(f"{kilometers:.2f} kilometers is equal to {miles:.2f} miles.")
+    
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+
+
+# Program execution starts here
+if __name__ == "__main__":
+    main()
 
 
     # Return the variable to the calling function
